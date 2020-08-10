@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/hushNoteProjectFive.git/static/css/main.db15409e.chunk.css",
-    "main.js": "/hushNoteProjectFive.git/static/js/main.78795d37.chunk.js",
-    "main.js.map": "/hushNoteProjectFive.git/static/js/main.78795d37.chunk.js.map",
-    "runtime-main.js": "/hushNoteProjectFive.git/static/js/runtime-main.ddfe8c6b.js",
-    "runtime-main.js.map": "/hushNoteProjectFive.git/static/js/runtime-main.ddfe8c6b.js.map",
-    "static/js/2.8398bfe8.chunk.js": "/hushNoteProjectFive.git/static/js/2.8398bfe8.chunk.js",
-    "static/js/2.8398bfe8.chunk.js.map": "/hushNoteProjectFive.git/static/js/2.8398bfe8.chunk.js.map",
-    "index.html": "/hushNoteProjectFive.git/index.html",
-    "precache-manifest.6767127ef1e9073eacc4ca2c6482d24f.js": "/hushNoteProjectFive.git/precache-manifest.6767127ef1e9073eacc4ca2c6482d24f.js",
-    "service-worker.js": "/hushNoteProjectFive.git/service-worker.js",
-    "static/css/main.db15409e.chunk.css.map": "/hushNoteProjectFive.git/static/css/main.db15409e.chunk.css.map",
-    "static/js/2.8398bfe8.chunk.js.LICENSE.txt": "/hushNoteProjectFive.git/static/js/2.8398bfe8.chunk.js.LICENSE.txt"
+    "main.css": "/hushNoteProjectFive/static/css/main.db15409e.chunk.css",
+    "main.js": "/hushNoteProjectFive/static/js/main.f9f23a1d.chunk.js",
+    "main.js.map": "/hushNoteProjectFive/static/js/main.f9f23a1d.chunk.js.map",
+    "runtime-main.js": "/hushNoteProjectFive/static/js/runtime-main.867071cf.js",
+    "runtime-main.js.map": "/hushNoteProjectFive/static/js/runtime-main.867071cf.js.map",
+    "static/js/2.8f87147d.chunk.js": "/hushNoteProjectFive/static/js/2.8f87147d.chunk.js",
+    "static/js/2.8f87147d.chunk.js.map": "/hushNoteProjectFive/static/js/2.8f87147d.chunk.js.map",
+    "index.html": "/hushNoteProjectFive/index.html",
+    "precache-manifest.9eb4ef1dfaed9c893a8fff977b29408d.js": "/hushNoteProjectFive/precache-manifest.9eb4ef1dfaed9c893a8fff977b29408d.js",
+    "service-worker.js": "/hushNoteProjectFive/service-worker.js",
+    "static/css/main.db15409e.chunk.css.map": "/hushNoteProjectFive/static/css/main.db15409e.chunk.css.map",
+    "static/js/2.8f87147d.chunk.js.LICENSE.txt": "/hushNoteProjectFive/static/js/2.8f87147d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ddfe8c6b.js",
-    "static/js/2.8398bfe8.chunk.js",
+    "static/js/runtime-main.867071cf.js",
+    "static/js/2.8f87147d.chunk.js",
     "static/css/main.db15409e.chunk.css",
-    "static/js/main.78795d37.chunk.js"
+    "static/js/main.f9f23a1d.chunk.js"
   ]
 }
