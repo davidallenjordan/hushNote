@@ -1,21 +1,17 @@
-import React, { Component, Fragment} from 'react';
+import React from 'react';
 import Header from './Header';
 import Form from './Form';
+import CardDeck from './CardDeck';
 
-// import Header from './Header';
-// import Card from './Card';
+const App = () => {
 
-class App extends Component {
-  render() {
     return (
       <div className="backgroundContainer">
-        <div className="layoutContainer">
         <Header />
         <Form />
-        </div>
+        <CardDeck />
       </div>
     )
-  }
 }
 
   
