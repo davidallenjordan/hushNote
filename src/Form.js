@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import firebase from './firebase';
 
 class Form extends Component {
@@ -37,33 +37,37 @@ class Form extends Component {
   
   render() {
     return (
-      <div className="wrapper">
-        <main>
 
-          <form onChange={this.handleChange} action="submit">
-
-            <label htmlFor="note">Write your note here</label>
-            <input type="text" name="Note" id="note" value={this.state.userInput} onChange={this.handleChange} required></input>
-
-            <button onClick={this.handleClick} type="submit">Write Note</button>
-
-          </form>
-
-          <ul>
-
-          {this.state.submission.map((submission) => {
-              return (
-                <li key={submission.key}>
-                  <button onClick={() => this.deleteNote(submission.key)}>X</button>
-                  <p>{submission.note}</p>
-                </li>
-              )
-            })}
-
-          </ul>
-
-        </main>
-      </div>
+          <Fragment>
+            <section className="formContainer">
+  
+              <form onChange={this.handleChange} action="submit">
+  
+                <label htmlFor="note">Write your note here</label>
+                <textarea type="text" name="Note" id="note" value={this.state.userInput} onChange={this.handleChange} required></textarea>
+  
+                <button onClick={this.handleClick} type="submit">Write Note</button>
+  
+              </form>
+  
+            </section>
+  
+            <section className="cardDeck">
+              <ul>
+    
+              {this.state.submission.map((submission) => {
+                  return (
+                    <li className="cardContainer" key={submission.key}>
+                      <button onClick={() => this.deleteNote(submission.key)}>X</button>
+                      <p>{submission.note}</p>
+                    </li>
+                  )
+                })}
+    
+              </ul>
+            </section>
+  
+          </Fragment>
     )
   }
 
@@ -85,6 +89,8 @@ class Form extends Component {
 
     })
   }
+
+
 }
 
 export default Form;

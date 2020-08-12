@@ -9,8 +9,10 @@ class App extends Component {
   render() {
     return (
       <div className="backgroundContainer">
+        <div className="layoutContainer">
         <Header />
         <Form />
+        </div>
       </div>
     )
   }
