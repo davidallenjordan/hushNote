@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import firebase from './firebase';
 
 
-class CardDeck extends Component {
+class CardStack extends Component {
   constructor() {
-    super(); {
+    super();
 
       this.state = {
         submission: []
       }
 
-    }
   }
 
 
@@ -22,13 +21,13 @@ class CardDeck extends Component {
 
   render () {
     return (
-      <section className="cardDeck">
+      <section className="cardStack">
         <ul>
 
           {this.state.submission.map((submission) => {
             return (
               <li className="cardContainer" key={submission.key}>
-                <button onClick={() => this.deleteNote(submission.key)}>X</button>
+                <button onClick={() => this.deleteNote(submission.key)} aria-label="Delete Card"><i className="fas fa-times"></i></button>
                 <p>{submission.note}</p>
               </li>
             )
@@ -58,8 +57,8 @@ class CardDeck extends Component {
 
     })
   }
-  
+
 
 }
 
-export default CardDeck;
+export default CardStack;

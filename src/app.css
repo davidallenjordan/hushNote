@@ -6,6 +6,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 *, *:before, *:after {box-sizing: inherit}
 
+.srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
 
 /* Colours */
 
@@ -13,15 +15,13 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
   --primary-colour: #ff9595;
   --secondary-colour: #342b38;
   --tertiary-colour: #80bdab;
-  --quaternary-colour: #bbf1c8;
-  --test-colour: #fea5a5;
 }
 
 /* Global Styles / Resets */
 
 .wrapper {
   max-width: 1400px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -44,121 +44,143 @@ html {
 body {
   font-family: 'Nunito', sans-serif;
   font-size: 2rem;
-  color: #000;
 }
 
 h1 {
-  padding: 10px 30px;
-  font-family: 'Sniglet', cursive;
-  font-size: 7.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  font-size: 12rem;
   text-transform: capitalize;
-  color: #29023d;
-  background: #fe91c9b8;
-  border-radius: 50px;
-  display: inline-block;
-
-
-
+  color: #11a0c0;
 }
 
-/* h2 {
-  width: 40%;
-  padding: 35px;
-  margin-top: 10px;
+h2 {
   font-size: 4rem;
   font-weight: 600;
-  background: #fe91c9b8;
-  border-radius: 50px;
-} */
+}
 
 /* Background */
 
 body {
-  /* background: #29023d; */
-}
-
-/* #FE91CA */
-
-.backgroundContainer {  
-  width: 85%;
-  margin: 85px auto;
-  height: 900px;
   background: url(./assets/sakura.jpg) no-repeat center/cover;
-  border-radius: 30px;
 }
 
-/* Header */
-/* header {
-  padding: 30px 40px;
-  margin: 30px 0 0 30px;
-  display: inline-block;
-} */
+/* Header + Form */
 
-/* Main ----> */
+.layoutContainer {
+  max-width: 80%;
+
+  padding: 25px 50px;
+  margin: 80px auto 50px auto;
+
+  background: #ffffffa9;
+  border-radius: 5px;
+
+  display: flex;
+  align-content: center;
+}
 
 /* Form */
 
-/* label {
-  padding: 20px;
-  font-size: 2.5rem;
-  font-weight: 600;
-} */
+form {
+  margin-left: 50px;
 
-
-/* form {
-
-  width: 60%;
-  height: 400px;
-  margin: 0 auto;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+}
 
-
-/* textarea {
-  height: 200px;
-  width: 500px;
+label {
   padding: 20px;
 
   font-size: 2.5rem;
+  font-weight: 600;
+}
 
-  background: #ffe0f7ee;
-  color: #000;
+textarea {
+  width: 230px;
+  height: 300px;
 
-  border-radius: 20px;
-  border: none;
+  padding: 15px;
+
+  line-height: 1.35;
+  font-size: 2.5rem;
+  font-family: inherit;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 3px solid #11a0c0;
+  border-bottom: none;
 
   resize: none;
-} */
+  transition: all 0.2s;
+}
 
 textarea:active,
 textarea:focus {
   outline: none;
-  border: 3px solid #8e8ae9;
-  box-shadow: 0 0 30px #8e8ae9;
+  border: 3px solid pink;
+  box-shadow: 0 0 30px pink;
 }
 
-/* Card Deck Section ----> */
-
-.cardDeck {
-  
+textarea:invalid {
+  outline: none;
 }
 
-.cardDeck ul {
+form button {
+  width: 230px;
+  padding: 10px 20px;
+
+  font-size: 3rem;
+
+  border: 3px solid #11a0c0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  background: pink;
+  color: #11a0c0;
+
+  transition: all 0.3s;
+
+}
+
+form button:hover {
+  background: #11a0c0;
+  color: pink;
+}
+
+/* Card Stack ----> */
+
+.cardStack ul {
   display: flex;
-
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cardContainer {
-  margin: 0 10px;
-  padding: 15px;
-  font-size: 2.5rem;
-  font-family: 'Sniglet', cursive;
-  background: #d3dbffc5;
-  border-radius: 15px;
-  width: 250px;
+  width: 230px;
   height: 300px;
-  line-height: 1.75;
+
+  margin: 10px;
+  padding: 15px;
+
+  font-size: 2.5rem;
+  font-weight: 1300;
+  line-height: 1.35;
+
+  background: #ffffffb4;
+  border-radius: 5px;
+
+  position: relative;
+}
+
+.cardContainer button {
+  padding: 10px 20px;
+
+  background: #ffffff00;
+  border: none;
+
+  position: absolute;
+  top: -5px;
+  right: -5px;
 }

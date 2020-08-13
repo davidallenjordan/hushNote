@@ -6,27 +6,55 @@ class Form extends Component {
     super();
 
     this.state = {
-      userInput: ''
+      userInput: '',
+      inputTooShort: true,
+      inputTooLong: false
     }
+
+
 
   }
 
 
   handleChange = (event) => {
-    this.setState({
-      userInput: event.target.value
-    })
+    if (this.state.inputTooShort) {
+      this.characterLimit();
+    }
+      this.setState({
+        userInput: event.target.value
+      }) 
+    
   }
 
   handleClick = (event) => {
     event.preventDefault();
 
+    this.characterLimit();
+
     const dbRef = firebase.database().ref();
     dbRef.push(this.state.userInput);
+
 
     this.setState({
       userInput: ''
     })
+  }
+
+
+
+  characterLimit = () => {
+
+    if (this.state.userInput.length > 120) {
+      this.setState({
+        inputTooLong: true
+      })
+    }
+    
+    if (this.state.userInput.length < 40) {
+      this.setState({
+        inputTooShort: true
+      })
+    }
   }
 
   
@@ -37,8 +65,23 @@ class Form extends Component {
   
         <form onChange={this.handleChange} action="submit">
   
-          <label htmlFor="note">Write your note here</label>
-          <textarea type="text" name="Note" id="note" value={this.state.userInput} onChange={this.handleChange} required></textarea>
+          <label className="srOnly" htmlFor="note">Write your note here</label>
+
+          {
+            this.state.inputTooShort 
+            ? <p>The note is too short, please type more</p>
+            : null
+          }
+          {
+            this.state.inputTooLong
+            ? <p>The note is too long, please type less</p>
+            : null
+          }
+
+            
+            <textarea type="text" name="Note" id="note" aria-label="Write here"
+              value={this.state.userInput}
+              onChange={this.handleChange} placeholder="start writing..."></textarea>
   
           <button onClick={this.handleClick} type="submit">Write Note</button>
   
