@@ -6,24 +6,18 @@ import CardStack from './CardStack';
 const App = () => {
 
     return (
-      // <div className="backgroundContainer">
 
       <div className="wrapper">
 
-        {/* <div className="flexContainer"> */}
-
-          <div className="layoutContainer">
-            <Header />
-            <Form />
-          </div>
-
-          <CardStack />
-
+        <div className="layoutContainer">
+          <Header />
+          <Form />
         </div>
 
-      // </div>
+        <CardStack />
 
-      // </div>
+      </div>
+
     )
 }
 

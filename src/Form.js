@@ -11,48 +11,54 @@ class Form extends Component {
       inputTooLong: false
     }
 
-
-
   }
 
-
+  // Tracks character input and checks state
   handleChange = (event) => {
-    if (this.state.inputTooShort) {
-      this.characterLimit();
-    }
+    this.characterLimiter();
+
       this.setState({
         userInput: event.target.value
       }) 
     
   }
 
+  // Submits the note if the character requirements are met
   handleClick = (event) => {
     event.preventDefault();
 
-    this.characterLimit();
+    if (!this.state.inputTooShort || !this.state.inputTooLong) {
+      const dbRef = firebase.database().ref();
+      dbRef.push(this.state.userInput);
 
-    const dbRef = firebase.database().ref();
-    dbRef.push(this.state.userInput);
+      this.setState({
+        userInput: ''
+      })
+    } 
 
-
-    this.setState({
-      userInput: ''
-    })
   }
 
+  // Changes the state for the character count 
+  characterLimiter = () => {
 
-
-  characterLimit = () => {
-
-    if (this.state.userInput.length > 120) {
+    if (this.state.userInput.length > 106) {
       this.setState({
         inputTooLong: true
       })
+    } else {
+      this.setState({
+        inputTooLong: false
+      })
+
     }
     
-    if (this.state.userInput.length < 40) {
+    if (this.state.userInput.length < 30) {
       this.setState({
         inputTooShort: true
+      })
+    } else {
+      this.setState({
+        inputTooShort: false
       })
     }
   }
@@ -67,23 +73,30 @@ class Form extends Component {
   
           <label className="srOnly" htmlFor="note">Write your note here</label>
 
-          {
-            this.state.inputTooShort 
-            ? <p>The note is too short, please type more</p>
-            : null
-          }
-          {
-            this.state.inputTooLong
-            ? <p>The note is too long, please type less</p>
-            : null
-          }
+          <div className="characterLimitMsg">
 
+            {
+              this.state.inputTooShort 
+              ? <p>The note is too short, please type more</p>
+              : null
+            }
+            {
+              this.state.inputTooLong
+              ? <p>The note is too long, please type less</p>
+              : null
+            }
+
+          </div>
             
-            <textarea type="text" name="Note" id="note" aria-label="Write here"
-              value={this.state.userInput}
-              onChange={this.handleChange} placeholder="start writing..."></textarea>
-  
-          <button onClick={this.handleClick} type="submit">Write Note</button>
+            <textarea type="text" name="Note" id="note" aria-label="Write here" 
+              value={this.state.userInput} onChange={this.handleChange} placeholder="start writing here...">
+            </textarea>
+
+            {
+              this.state.inputTooShort || this.state.inputTooLong
+              ? <button onClick={ (event) => event.preventDefault() } aria-label="note must be between 30 and 100 characters to submit">Write Note</button>
+              : <button onClick={this.handleClick} type="submit">Write Note</button>
+            }
   
         </form>
   
