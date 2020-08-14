@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Header title and explanation of app
+
 const Header = () => {
     return (
 

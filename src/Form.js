@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
 
+// The Form Component to take user input, handle errors and pass state to CardStack.js
+
+// Setting state for user input and character limit error handling
 class Form extends Component {
   constructor() {
     super();
@@ -38,7 +41,7 @@ class Form extends Component {
 
   }
 
-  // Changes the state for the character count 
+  // Updates the state for the character count 
   characterLimiter = () => {
 
     if (this.state.userInput.length > 106) {
@@ -63,7 +66,8 @@ class Form extends Component {
     }
   }
 
-  
+  // JSX to check character limit states and display messages accordingly
+  // Button is disabled untill character sweet spot is met
   render() {
     return (
 
@@ -88,15 +92,15 @@ class Form extends Component {
 
           </div>
             
-            <textarea type="text" name="Note" id="note" aria-label="Write here" 
-              value={this.state.userInput} onChange={this.handleChange} placeholder="start writing here...">
-            </textarea>
+          <textarea type="text" name="Note" id="note" aria-label="Write here" 
+            value={this.state.userInput} onChange={this.handleChange} placeholder="start writing here...">
+          </textarea>
 
-            {
-              this.state.inputTooShort || this.state.inputTooLong
-              ? <button onClick={ (event) => event.preventDefault() } aria-label="note must be between 30 and 100 characters to submit">Write Note</button>
-              : <button onClick={this.handleClick} type="submit">Write Note</button>
-            }
+          {
+            this.state.inputTooShort || this.state.inputTooLong
+            ? <button onClick={ (event) => event.preventDefault() } aria-label="note must be between 30 and 100 characters to submit">Write Note</button>
+            : <button onClick={this.handleClick} type="submit">Write Note</button>
+          }
   
         </form>
   
@@ -105,7 +109,7 @@ class Form extends Component {
     )
   }
 
-
+  // End of Component
 }
 
 export default Form;

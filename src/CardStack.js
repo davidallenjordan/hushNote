@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
 
+// Displays all user entries on the page
 
+// New array for user input / submission
 class CardStack extends Component {
   constructor() {
     super();
@@ -13,12 +15,14 @@ class CardStack extends Component {
   }
 
 
+  // Deletes note from firebase
   deleteNote(key) {
     const dbRef = firebase.database().ref();
     dbRef.child(key).remove();
   }
 
-
+  // Maps the user input and appends onto page
+  // Delete function called inside button click
   render () {
     return (
       <section className="cardStack">
@@ -36,9 +40,10 @@ class CardStack extends Component {
         </ul>
       </section>
     )
+
   }
-
-
+  
+  // Pushes the user input onto firebase
   componentDidMount() {
     const dbRef = firebase.database().ref();
 
@@ -58,7 +63,7 @@ class CardStack extends Component {
     })
   }
 
-
+// End of Component
 }
 
 export default CardStack;

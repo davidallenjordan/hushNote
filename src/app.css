@@ -78,9 +78,7 @@ textarea,
 
 h1,
 .cardContainer button,
-form button,
-form button:hover,
-form button:focus {
+form button {
   color: var(--primary-colour);
 }
 
@@ -89,6 +87,10 @@ form button:focus {
   background: var(--tertiary-colour);
 }
 
+.cardContainer button,
+form button {
+  font-size: 3rem;
+}
 
 /* Background */
 
@@ -104,13 +106,6 @@ form,
   display: flex;
 }
 
-/* .layoutContainer,
-form,
-.cardStack ul {
-  /* align-items: center; */
-/* } */
-
-
 /* Header + Form */
 
 .layoutContainer {
@@ -119,11 +114,7 @@ form,
 
   padding: 25px 50px;
   margin: 80px auto 50px auto;
-
-  border-radius: 5px;
 }
-
-
 
 /* Form */
 
@@ -160,6 +151,12 @@ textarea,
   line-height: 1.35;
 }
 
+textarea,
+form button {
+  border: 3px solid var(--primary-colour);
+  transition: all 0.2s;
+}
+
 textarea {
   padding: 15px;
 
@@ -167,11 +164,9 @@ textarea {
 
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border: 3px solid var(--primary-colour);
   border-bottom: none;
 
   resize: none;
-  transition: all 0.2s;
 }
 
 textarea:active,
@@ -188,20 +183,22 @@ textarea:invalid {
 form button {
   padding: 10px 20px;
 
-  font-size: 3rem;
-
   border: 3px solid var(--primary-colour);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
   background: var(--secondary-colour);
-
-  transition: all 0.3s;
 }
 
 form button:hover,
 form button:focus {
   background: var(--primary-colour);
+  color: var(--secondary-colour);
+}
+
+.layoutContainer,
+.cardContainer {
+  border-radius: 5px;
 }
 
 /* Card Stack ----> */
@@ -215,20 +212,15 @@ form button:focus {
   margin: 10px;
   padding: 20px 15px 15px 15px;
     
-  border-radius: 5px;
-  
   position: relative;
 }
 
 .cardContainer p {
   overflow-wrap: break-word;
-  
 }
 
 .cardContainer button {
   padding: 10px 20px;
-
-  font-size: 3rem;
 
   background: #ffffff00;
   border: none;
@@ -245,7 +237,7 @@ form button:focus {
   color: #000;
 }
 
-/* Media Queries */
+/* Media Queries ----------------> */
 
 /* Smaller Screens / Tablets */
 @media (max-width: 765px) {
@@ -305,4 +297,6 @@ form button:focus {
   h2 {
     font-size: 3.5rem;
   }
+
+  /* End of Query */
 }
