@@ -6,6 +6,6 @@ Built by David Allen-Jordan
 
 
 Known bugs to fix:
--clean up code to make more dry
--remove "the note is too short" from opening of app
--change layout so form takes up full width and sits below header
+- clean up code to make more dry
+- remove "the note is too short" from opening of app
+- change layout so form takes up full width and sits below header
