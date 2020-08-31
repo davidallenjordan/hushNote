@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hushNote/static/css/main.b90b67c1.chunk.css",
+    "main.css": "/hushNote/static/css/main.39607dca.chunk.css",
     "main.js": "/hushNote/static/js/main.3f220692.chunk.js",
     "main.js.map": "/hushNote/static/js/main.3f220692.chunk.js.map",
     "runtime-main.js": "/hushNote/static/js/runtime-main.42f9f2e2.js",
@@ -8,16 +8,16 @@
     "static/js/2.08c0f7dc.chunk.js": "/hushNote/static/js/2.08c0f7dc.chunk.js",
     "static/js/2.08c0f7dc.chunk.js.map": "/hushNote/static/js/2.08c0f7dc.chunk.js.map",
     "index.html": "/hushNote/index.html",
-    "precache-manifest.3082e00ec064d4eaf32dc515ba5d8b4c.js": "/hushNote/precache-manifest.3082e00ec064d4eaf32dc515ba5d8b4c.js",
+    "precache-manifest.4a64d118136a2585c08a777f8bbfd0d5.js": "/hushNote/precache-manifest.4a64d118136a2585c08a777f8bbfd0d5.js",
     "service-worker.js": "/hushNote/service-worker.js",
-    "static/css/main.b90b67c1.chunk.css.map": "/hushNote/static/css/main.b90b67c1.chunk.css.map",
+    "static/css/main.39607dca.chunk.css.map": "/hushNote/static/css/main.39607dca.chunk.css.map",
     "static/js/2.08c0f7dc.chunk.js.LICENSE.txt": "/hushNote/static/js/2.08c0f7dc.chunk.js.LICENSE.txt",
     "static/media/app.css": "/hushNote/static/media/sakura.0e0042b9.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.42f9f2e2.js",
     "static/js/2.08c0f7dc.chunk.js",
-    "static/css/main.b90b67c1.chunk.css",
+    "static/css/main.39607dca.chunk.css",
     "static/js/main.3f220692.chunk.js"
   ]
 }

@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "91004482f8f09bd0702fb36fd2b2c428",
+    "revision": "fd73816195da4fb7933a872330aaa66c",
     "url": "/hushNote/index.html"
   },
   {
-    "revision": "a67683b0561f33fda7a2",
-    "url": "/hushNote/static/css/main.b90b67c1.chunk.css"
+    "revision": "fdeb968d7dff92b8be5c",
+    "url": "/hushNote/static/css/main.39607dca.chunk.css"
   },
   {
     "revision": "5540b74053f72269f9d4",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hushNote/static/js/2.08c0f7dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a67683b0561f33fda7a2",
+    "revision": "fdeb968d7dff92b8be5c",
     "url": "/hushNote/static/js/main.3f220692.chunk.js"
   },
   {
